@@ -62,19 +62,13 @@ result = positive(list)
 print(result)
 
 
-def calculate_days(years, months):
-    months = years * 12 + months
-    days = months * 29
-    return total_days
+#Функция на вход получает 2 переменные.Кол-во лет (int). Кол-во месяцев (int). Вывести в консоль количество дней за это время. Считать, что в каждом месяце 29 дней.
 
-    years = 2
-    months = 3
+def calculate_days(year, month=29):
 
-result = calculate_days(years, months)
+      return (year*12) * month
 
-print(f"Количество дней за {years} лет и {months} месяцев: {result}")
-
-
+print(calculate_days(100))
 
 
 
