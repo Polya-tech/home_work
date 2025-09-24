@@ -26,6 +26,65 @@ def difference(): #Функция на вход получает два прои
 print(difference())
 
 
+def month_of_year(month): #сделала разными способами вывод месяца по номеру.  Функция на вход получает произвольное число от 1 до 12 (номер месяца). Вывести название сезона года в консоль (зима, весна, лето, осень)
+    if month in [12, 1, 2]:
+        return('winter')
+    elif month in range(3, 6):
+        return('spring')
+    elif 6 <= month <= 8:
+        return('summer')
+    elif 9 <= month <= 11:
+        return('autumn')
+
+print(month_of_year(9))
+
+
+
+def map(a, b, c): #5. Функция на вход получает три произвольных числа. Если все числа больше 10, то вывести на экран “yes”, иначе “no”;
+    if (a + b + c) > 10:
+        return('YES')
+    else:
+        return('NO')
+
+print(map(12, 0, 1))
+
+
+
+def positive(number):
+    count = 0
+    for num in number:
+        if num > 0:
+            count += 1
+    return count
+
+list = [98, -5, -4, -3, -3]
+result = positive(list)
+print(result)
+
+
+def calculate_days(years, months):
+    months = years * 12 + months
+    days = months * 29
+    return total_days
+
+    years = 2
+    months = 3
+
+result = calculate_days(years, months)
+
+print(f"Количество дней за {years} лет и {months} месяцев: {result}")
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
