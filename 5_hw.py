@@ -1,22 +1,24 @@
 from selenium import webdriver
+from selenium.common import NoSuchElementException
 from selenium.webdriver.common.by import By
 
 driver = webdriver.Chrome()
-driver.get("https://www.saucedemo.com/")
 
-username = driver.find_element(By.CSS_SELECTOR, '#user-name')
+try:
+    driver.get("https://www.saucedemo.com/")
 
-password = driver.find_element(By.CSS_SELECTOR, '#password')
-
-submit_button = driver.find_element(By.CSS_SELECTOR, '[type=submit]')
-
-
-if username and password and submit_button:
-    print("Элементы найдены")
-else:
-    print("Не все элементы найдены")
+    username_field = driver.find_element(By.ID, "user-name")
+    password_field = driver.find_element(By.ID, "password")
+    submit_button = driver.find_element(By.CLASS_NAME, "btn_action")
 
 
+    if username_field and password_field and submit_button:
+        print("Элементы найдены")
+except NoSuchElementException:
+    print("Элементы не найдены")
+
+finally:
+    driver.quit()
 
 
 
