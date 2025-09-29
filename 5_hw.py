@@ -1,3 +1,25 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+driver = webdriver.Chrome()
+driver.get("https://www.saucedemo.com/")
+
+username = driver.find_element(By.CSS_SELECTOR, '#user-name')
+
+password = driver.find_element(By.CSS_SELECTOR, '#password')
+
+submit_button = driver.find_element(By.CSS_SELECTOR, '[type=submit]')
+
+
+if username and password and submit_button:
+    print("Элементы найдены")
+else:
+    print("Не все элементы найдены")
+
+
+
+
+
 #CSS_https://flukeout.github.io/
 
 1. plate
