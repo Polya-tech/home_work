@@ -16,3 +16,5 @@ def check_elements():
             print("Элементы найдены")
     except NoSuchElementException:
             print("Элементы не найдены")
+
+check_elements() 
