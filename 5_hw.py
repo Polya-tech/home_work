@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 
-def check_elements():
+def test_check_elements():
     driver = webdriver.Chrome()
     driver.get("https://www.saucedemo.com/")
 
@@ -17,4 +17,4 @@ def check_elements():
     except NoSuchElementException:
             print("Элементы не найдены")
 
-check_elements() 
+test_check_elements() 
